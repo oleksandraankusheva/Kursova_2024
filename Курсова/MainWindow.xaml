@@ -1,0 +1,44 @@
+﻿<Window x:Class="Курсова.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Курсова"
+        mc:Ignorable="d"
+        Title="Облік медикаментів" Height="320.4" Width="507.2">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Button x:Name="Search_Button" Content="Пошук" Grid.Row="6" Grid.Column="1" FontSize="16" Click="Search_Button_Click"></Button>
+        <Button x:Name="Create_Button" Content="Створити" Grid.Row="6" Grid.Column="3" FontSize="16" Click="Create_Button_Click"></Button>
+
+        <TextBlock x:Name="Name" Text="Назва:" TextAlignment="Center" VerticalAlignment="Center" FontSize="22" Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Producer" Text="Виробник:" TextAlignment="Center" VerticalAlignment="Center" FontSize="22" Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="2"/>
+
+        <TextBox x:Name="Name_Text" TextAlignment="Left" VerticalAlignment="Bottom" FontSize="22" Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="2"></TextBox>
+        <ComboBox x:Name="Producer_Text" VerticalAlignment="Bottom" FontSize="20" Grid.Row="2" Grid.Column="2" Grid.ColumnSpan="2" SelectionChanged="Producer_Text_SelectionChanged">
+            <ComboBoxItem Content="ПАТ Фармак" FontSize="18"/>
+            <ComboBoxItem Content="ПАТ Дарниця" FontSize="18"/>
+            <ComboBoxItem Content="ТОВ ЮРіЯ-ФАРМ" FontSize="18"/>
+        </ComboBox>
+
+        <CheckBox x:Name="NameCheck" Content="Тільки назва" HorizontalAlignment="Left" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4" FontSize="18" Grid.ColumnSpan="2"/>
+        
+    </Grid>
+</Window>
